@@ -1,0 +1,182 @@
++-
+powershell - yet to be done 
+
+pipeline -- done 
+
+authentication 
+                       
+authorization 
+
+jenkins - github - branching and interview- questions
+
+build triggers - partially done 
+
+.net -- http://justinramel.com/2013/01/15/5-minute-setup/
+
+walk through jenkins ( overall )
+
+is possible two different source code repositaries 
+
+pipelines for avg timings ( which takes more time )
+
+master - slave how is it possible 
+
+load balacing - jenkins
+
+git 
+
+types of merge
+
+rebase 
+
+conflicts
+
+stash 
+
+diff 
+
+pull / fetch
+
+ignore
+
+ansible
+
+merge scenarios 
+
+python with jenkins 
+
+jenkins reports -- pmd checkstyle --https://github.com/saurabh0010/houselannister
+
+maven projects -- demo 
+
+
+selenium or junit test automation
+
+how do we get this PMD warning? like from plugin or from github. :( 
+
+two pipeles parallel execution 
+
+cloning of pipeline 
+
+passing on the artifacts / workspace 
+
+dotnet .exe (dotnet projects)
+
+workflow (inside pipeline)
+
+jenkins automation using selennium
+
+from outside to inside docker 
+
+migrating vmware vm's to containers
+
+aws overview 
+
+command for docker daemon 
+
+how many daemons usually we have for docker 
+
+where are the files stored containers locally
+
+/var/lib/docker ( here we can see all images and containers)
+
+docker images ( does it have any repositary as such or it just gets downloaded by the image and tag name )
+
+how docker daemon is communicating with kitematic 
+
+how can i add two three images in one container 
+----
+how is my client talking with daemon on the same system
+
+(windows , linux ) 
+
+ans : both can be communicated by REST API
+-----
+where are the files stored locally ( installed , configured)
+
+sudo ( permission , how is it linked , why we are not able to as normal user , how can we enable the normal user to use 
+
+the daemon )
+
+ans
+
+
+
+Checking the ownership of /var/run/docker.sock
+
+ls -l /var/run/docker.sock
+If you're not the owner then change ownership with the command
+
+sudo chmod 777 /var/run/docker.sock
+
+----
+
+
+difference between local and remote repositary 
+
+container ( meta data , understand how it is exposed to the network )
+
+how many applications it is holding (within container)
+
+if i have two applications inside one container ( then how do i start or stop each application , since we already
+
+learnt how to do the same at container level but not at application level )
+
+dockerconfig 
+
+docker swarm 
+
+what is docker.sock
+
+docker.sock is the UNIX socket that Docker daemon is listening to. It's the main entry point for Docker API. It also can be TCP socket but by default for security reasons Docker defaults to use UNIX socket.
+
+Docker cli client uses this socket to execute docker commands by default. You can override these settings as well.
+
+There might be different reasons why you may need to mount Docker socket inside a container. Like launching new containers from within another container. Or for auto service discovery and Logging purposes. This increases attack surface so you should be careful if you mount docker socket inside a container there are trusted codes running inside that container otherwise you can simply compromise your host that is running docker daemon, since Docker by default launches all containers as root.
+
+Docker socket has a docker group in most installation so users within that group can run docker commands against docker socket without root permission but actual docker containers still get root permission since docker daemon runs as root effectively (it needs root permission to access namespace and cgroups).
+
+I hope it answers your question.
+
+More info: https://docs.docker.com/engine/reference/commandline/daemon/
+
+
+sudo service docker start
+
+___
+
+docker compose 
+
+
+sudo apt-get install python-pip
+
+mkdir 
+
+
+cd workpress
+
+
+make the compose 
+
+
+netstat -plten |grep java
+ 
+
+how does internally the REST API calls work between host and docker daemon
+
+devops - interview questions 
+
+containerization failure policy ? what happens if container builds / crashes
+
+how we will get notified , posssible scenarios that can make a build to fail
+
+(resiliency - fail-over support )
+
+
+jenkins and github (maven ) in docker 
+
+code merging / sync inside docker
+
+
+docker history ( command )
+
